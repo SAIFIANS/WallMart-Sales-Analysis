@@ -144,7 +144,7 @@ $VAT$ is added to the $COGS$ and this is what is billed to the customer.
 
 ## Code
 
-For the rest of the code, check the [WallMartSales Analysis.sql](https://github.com/SAIFIANS/WallMart-Sales-Analysis/blob/main/WallMartSales%20Analysis.sql) file
+For the rest of the code, check the [WallMartSales_Analysis.sql](https://github.com/SAIFIANS/WallMart-Sales-Analysis/blob/main/WallMartSales%20Analysis.sql) file
 
 ```sql
 -- Create database
