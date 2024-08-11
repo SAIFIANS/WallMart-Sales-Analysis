@@ -113,42 +113,42 @@ The dataset was obtained from the [Kaggle Walmart Sales Forecasting Competition]
 
 ## Revenue And Profit Calculations
 
-$ COGS = unitsPrice * quantity $
+{COGS} = unitsPrice * quantity $
 
-$ VAT = 5\% * COGS $
+{VAT} = 5\% * COGS $
 
 $VAT$ is added to the $COGS$ and this is what is billed to the customer.
 
-$ total(gross_sales) = VAT + COGS $
+{total(gross_sales)} = VAT + COGS $
 
-$ grossProfit(grossIncome) = total(gross_sales) - COGS $
+{grossProfit(grossIncome)} = total(gross_sales) - COGS $
 
 **Gross Margin** is gross profit expressed in percentage of the total(gross profit/revenue)
 
-$ \text{Gross Margin} = \frac{\text{gross income}}{\text{total revenue}} $
+{Gross Margin} = {gross income} - {total revenue} $
 
 <u>**Example with the first row in our DB:**</u>
 
 **Data given:**
 
-- $ \text{Unite Price} = 45.79 $
-- $ \text{Quantity} = 7 $
+- {Unit Price} = 45.79 $
+- {Quantity} = 7
 
-$ COGS = 45.79 * 7 = 320.53 $
+{COGS} = 45.79 * 7 = 320.53 $
 
-$ \text{VAT} = 5\% * COGS\\= 5\%  320.53 = 16.0265 $
+{VAT} = 5% * COGS= 5% * 320.53 = 16.0265 $
 
-$ total = VAT + COGS\\= 16.0265 + 320.53 = $336.5565$
+{total} = VAT + COGS= 16.0265 + 320.53 = $336.5565$
 
-$ \text{Gross Margin Percentage} = \frac{\text{gross income}}{\text{total revenue}}\\=\frac{16.0265}{336.5565} = 0.047619\\\approx 4.7619\% $
+{Gross Margin Percentage} = {gross income}}{{total revenue}}={16.0265}{336.5565} = 0.047619 approx 4.7619% $
 
 ## Code
 
-For the rest of the code, check the [SQL_queries.sql](https://github.com/Princekrampah/WalmartSalesAnalysis/blob/master/SQL_queries.sql) file
+For the rest of the code, check the [WallMartSales Analysis.sql](https://github.com/SAIFIANS/WallMart-Sales-Analysis/blob/main/WallMartSales%20Analysis.sql) file
 
 ```sql
 -- Create database
-CREATE DATABASE IF NOT EXISTS walmartSales;
+CREATE DATABASE IF NOT EXISTS WalmartSales;
 
 -- Create table
 CREATE TABLE IF NOT EXISTS sales(
@@ -156,7 +156,7 @@ CREATE TABLE IF NOT EXISTS sales(
     branch VARCHAR(5) NOT NULL,
     city VARCHAR(30) NOT NULL,
     customer_type VARCHAR(30) NOT NULL,
-    gender VARCHAR(30) NOT NULL,
+    gender VARCHAR(10) NOT NULL,
     product_line VARCHAR(100) NOT NULL,
     unit_price DECIMAL(10,2) NOT NULL,
     quantity INT NOT NULL,
